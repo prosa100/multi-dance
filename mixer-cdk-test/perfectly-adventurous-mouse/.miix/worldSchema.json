@@ -1,0 +1,105 @@
+[
+  {
+    "name": "$working",
+    "world": {
+      "scenes": [
+        {
+          "controls": [
+            {
+              "controlID": "my_first_button",
+              "cost": 100,
+              "disabled": true,
+              "kind": "button",
+              "position": [
+                {
+                  "height": 8,
+                  "size": "large",
+                  "width": 10,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "height": 8,
+                  "size": "medium",
+                  "width": 10,
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "progress": 0.5,
+              "text": "My First Button"
+            },
+            {
+              "angle": 0.7,
+              "controlID": "my_awesome_joystick",
+              "disabled": true,
+              "intensity": 0.5,
+              "kind": "joystick",
+              "position": [
+                {
+                  "height": 7,
+                  "size": "large",
+                  "width": 7,
+                  "x": 1,
+                  "y": 10
+                },
+                {
+                  "height": 7,
+                  "size": "medium",
+                  "width": 7,
+                  "x": 11,
+                  "y": 0
+                }
+              ],
+              "sampleRate": 50
+            },
+            {
+              "controlID": "giveHealth",
+              "kind": "button",
+              "position": [
+                {
+                  "height": 4,
+                  "size": "large",
+                  "width": 6,
+                  "x": 19,
+                  "y": 4
+                }
+              ],
+              "text": "Give Health"
+            },
+            {
+              "controlID": "move",
+              "kind": "joystick",
+              "position": [
+                {
+                  "height": 12,
+                  "size": "large",
+                  "width": 12,
+                  "x": 31,
+                  "y": 4
+                }
+              ],
+              "sampleRate": 50
+            },
+            {
+              "controlID": "spin",
+              "kind": "joystick",
+              "position": [
+                {
+                  "height": 12,
+                  "size": "large",
+                  "width": 12,
+                  "x": 46,
+                  "y": 4
+                }
+              ],
+              "sampleRate": 50
+            }
+          ],
+          "sceneID": "default"
+        }
+      ]
+    },
+    "savedAt": 1542850478331
+  }
+]
