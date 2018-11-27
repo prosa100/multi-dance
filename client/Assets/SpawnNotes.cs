@@ -1,23 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SpawnNotes : MonoBehaviour
 {
-	public GameObject notePrefab;
+	public FallingNote notePrefab;
 	// Use this for initialization
+
+	List<FallingNote> noteObjects = new List<FallingNote>();
 	void Start()
 	{
-		foreach (var note in notes)
+
+		var rotations = new[]
 		{
-			Instantiate(notePrefab, note, Quaternion.identity, transform);
+			 Quaternion.Euler(0, 0, 0),
+			 Quaternion.Euler(0, 0, 90),
+			 Quaternion.Euler(0, 0, -90),
+			 Quaternion.Euler(0, 0, 180)
+		};
+		var names = new[] { "Left", "Down", "Up", "Right" };
+		foreach (var noteData in notes)
+		{
+			var direction = (int)noteData.x;
+
+			var pos = new Vector3(direction * 60, 500 * noteData.y);
+			var note = Instantiate(notePrefab, transform.TransformPoint(pos), rotations[direction], transform);
+			note.name = names[direction];
+
+			noteObjects.Add(note);
+
+			
+
 		}
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-
 	}
 
 	public Vector3[] notes = {
